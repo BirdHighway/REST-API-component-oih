@@ -64,7 +64,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          platform: linux/amd64/v8
+          platforms: linux/amd64/v8, linux/arm64
       - run: git push
         env:
           # The secret is passed automatically. Nothing to configure.
